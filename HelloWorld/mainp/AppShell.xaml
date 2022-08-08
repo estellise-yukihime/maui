@@ -4,18 +4,12 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:mainp"
-    FlyoutBehavior="Flyout"
+    FlyoutBehavior="Disabled"
     FlyoutVerticalScrollMode="Auto">
-
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="Home" />
-
-    <ShellContent
-        Title="Second Page"
-        ContentTemplate="{DataTemplate local:SecondPage}"
-        Route="SecondPage" />
-
+    
 </Shell>

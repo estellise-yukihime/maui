@@ -5,9 +5,9 @@
 
     <OnPlatform x:Key="mainColor"
                 x:TypeArguments="Color">
-        <On Platform="Android" Value="black" />
-        <On Platform="iOS" Value="black" />
-        <On Platform="WinUI" Value="black" />
+        <On Platform="Android" Value="#FFF" />
+        <On Platform="iOS" Value="#FFF" />
+        <On Platform="WinUI" Value="#FFF" />
     </OnPlatform>
     
 </ResourceDictionary>
