@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell 
+    x:Name="flyoutshell"
+    x:Class="main.AppFlyout"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:main"
+    xmlns:pages="clr-namespace:main.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarIsVisible="False"
+    FlyoutBackgroundColor="#1f1f2e">
+    <!--<Shell.FlyoutContent>
+        <CollectionView BindingContext="{x:Reference flyoutshell}" IsGrouped="True" ItemsSource="{Binding FlyoutItems}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HeightRequest="40" Padding="10">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroupList>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="Transparent" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="Focused">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="Transparent" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateGroupList>
+                        </VisualStateManager.VisualStateGroups>
+                        <Label Text="{Binding Title}" TextColor="White" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Shell.FlyoutContent>-->
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid HeightRequest="100" Padding="10, 20, 10, 10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="130" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Text="Email@gmail.com" TextColor="White" />
+                <Label Grid.Row="1" Text="Normal" FontSize="13" TextColor="Green"/>
+                <Image Source="dotnet_bot.png" Grid.Column="1" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid HeightRequest="40" Padding="10">
+                <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="Transparent" />
+                                        </VisualState.Setters>
+                                 </VisualState>
+                                <VisualState x:Name="Focused">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="Transparent" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                <Label Text="{Binding Title}" TextColor="White" />
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid Padding="10">
+                <Label Text="{Binding Text}" TextColor="Green" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+    <ShellContent Title="Home" ContentTemplate="{DataTemplate local:MainPage}"/>
+    <ShellContent Title="Second" ContentTemplate="{DataTemplate pages:Second}"/>
+    <MenuItem Text="About"/>
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <Grid Padding="10">
+                <Label Text="August 13, 2022" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+</Shell>
